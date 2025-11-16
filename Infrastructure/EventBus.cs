@@ -4,8 +4,7 @@ namespace PubSubDemo.Infrastructure;
 
 public class EventBus : IPublisher
 {
-    private readonly Dictionary<Type, List<ISubscriber>> _subscribers =
-        new Dictionary<Type, List<ISubscriber>>();
+    private readonly Dictionary<Type, List<ISubscriber>> _subscribers = new();
 
     public void RegisterSubscriber<TEvent>(ISubscriber subscriber) where TEvent : IEvent
     {
@@ -21,10 +20,8 @@ public class EventBus : IPublisher
     {
         var eventType = evt.GetType();
 
-        if (!_subscribers.ContainsKey(eventType))
+        if (!_subscribers.TryGetValue(eventType, out var subscribers))
             return;
-
-        var subscribers = _subscribers[eventType];
 
         var tasks = subscribers.Select(s => s.HandleAsync(evt));
         await Task.WhenAll(tasks);
