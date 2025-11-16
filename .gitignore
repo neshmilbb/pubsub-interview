@@ -1,0 +1,85 @@
+## Rider-specific ignores
+.idea/
+*.sln.iml
+*.csproj.iml
+*.unity.iml
+
+# Rider coverage file
+*.coverage
+
+# Rider user-specific files
+*.dotCover
+*.dotCover.user
+
+# Rider temp files
+_ReSharper.*
+*.ReSharper.*
+
+## .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+[Ww][Ii][Nn]32/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+[Ll]og/
+
+# Visual Studio
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+*.suo
+*.cache
+*.vbw
+
+# NuGet
+**/[Pp]ackages/*
+!**/[Pp]ackages/build/
+*.nupkg
+**/packages.config
+.nuget/
+NuGet.exe
+
+# .NET 8 specific
+**/publish/
+**/wwwroot/lib/
+appsettings.*.json
+appsettings.Development.json
+
+# MSTest test results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Local history for Visual Studio
+.localhistory/
+
+# Backup folder for Package Reference Convert tool in Visual Studio 2017
+MigrationBackup/
+
+# Azure Functions
+azure-functions-core-tools/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+
+# VS Code
+.vscode/
